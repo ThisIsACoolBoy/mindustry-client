@@ -95,8 +95,10 @@ public interface Platform{
             uuid = new String(Base64Coder.encode(result));
             Core.settings.put("uuid", uuid);
             Core.settings.save();
+            Console.log(uuid);
             return uuid;
         }
+        Console.log(uuid);
         return uuid;
     }
 
