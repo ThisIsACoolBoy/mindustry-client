@@ -97,7 +97,7 @@ public interface Platform{
             Core.settings.save();
             return uuid;
         }
-        Log.info(uuid); //it appears i have not broken anything yet
+        Log.info(uuid); 
         return uuid;
     }
 
