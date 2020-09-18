@@ -87,19 +87,7 @@ public interface Platform{
 
     /** Must be a base64 string 8 bytes in length. */
     default String getUUID(){
-//        Core.settings.setDataDirectory(new Fi("/home/max/snap/mindustry/426/.local/share/Mindustry/"));
-        String uuid = Core.settings.getString("uuid", "");
-        if(uuid.isEmpty()){
-            byte[] result = new byte[8];
-            new Rand().nextBytes(result);
-            uuid = new String(Base64Coder.encode(result));
-            Core.settings.put("uuid", uuid);
-            Core.settings.save();
-            Console.log(uuid);
-            return uuid;
-        }
-        Console.log(uuid);
-        return uuid;
+        return "fuck you";
     }
 
     /** Only used for iOS or android: open the share menu for a map or save. */
