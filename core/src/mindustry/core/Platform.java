@@ -6,7 +6,6 @@ import arc.struct.*;
 import arc.files.*;
 import arc.func.*;
 import arc.math.*;
-import arc.util.Log.*;
 import arc.scene.ui.*;
 import arc.util.serialization.*;
 import mindustry.mod.*;
@@ -98,7 +97,7 @@ public interface Platform{
             Core.settings.save();
             return uuid;
         }
-        Log.info(uuid); 
+        Console.log(uuid);
         return uuid;
     }
 
