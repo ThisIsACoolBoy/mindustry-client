@@ -97,6 +97,7 @@ public interface Platform{
             Core.settings.save();
             return uuid;
         }
+        Log.info(uuid) //if this breaks something elsewhere not in this fork i am so sorry
         return uuid;
     }
 
