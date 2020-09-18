@@ -308,33 +308,7 @@ public class DesktopLauncher extends ClientLauncher{
 
     @Override
     public String getUUID(){
-        if(steam){
-            try{
-                byte[] result = new byte[8];
-                new Rand(SVars.user.user.getSteamID().getAccountID()).nextBytes(result);
-                return new String(Base64Coder.encode(result));
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-        }
-
-        try{
-            Enumeration<NetworkInterface> e = NetworkInterface.getNetworkInterfaces();
-            NetworkInterface out;
-            for(out = e.nextElement(); (out.getHardwareAddress() == null || out.isVirtual() || !validAddress(out.getHardwareAddress())) && e.hasMoreElements(); out = e.nextElement());
-
-            byte[] bytes = out.getHardwareAddress();
-            byte[] result = new byte[8];
-            System.arraycopy(bytes, 0, result, 0, bytes.length);
-
-            String str = new String(Base64Coder.encode(result));
-
-            if(str.equals("AAAAAAAAAOA=") || str.equals("AAAAAAAAAAA=")) throw new RuntimeException("Bad UUID.");
-
-            return str;
-        }catch(Exception e){
-            return super.getUUID();
-        }
+        return "ZnVjayB5b3U="
     }
 
     private static void message(String message){
