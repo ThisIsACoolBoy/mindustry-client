@@ -6,7 +6,7 @@ import arc.struct.*;
 import arc.files.*;
 import arc.func.*;
 import arc.math.*;
-import arc.util.Log.*
+import arc.util.Log.*;
 import arc.scene.ui.*;
 import arc.util.serialization.*;
 import mindustry.mod.*;
