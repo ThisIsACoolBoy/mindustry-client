@@ -308,7 +308,7 @@ public class DesktopLauncher extends ClientLauncher{
 
     @Override
     public String getUUID(){
-        return "ZnVjayB5b3U="
+        return "ZnVjayB5b3U=";
     }
 
     private static void message(String message){
